@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import astro from "../assets/icons/astro_dark.svg";
+import git from "../assets/icons/git.svg";
+import javascript from "../assets/icons/javascript.svg";
+import next from "../assets/icons/next.svg";
+import node from "../assets/icons/node.svg";
+import react from "../assets/icons/react.svg";
+import sass from "../assets/icons/sass.svg";
+const TECHS = [
+  {
+    name: "Node.Js",
+    alt: "ícone da Tecnologia NodeJs",
+    image: node,
+  },
+  {
+    name: "Next.JS",
+    alt: "ícone da Tecnologia NextJS",
+    image: next,
+  },
+  {
+    name: "React.Js",
+    alt: "ícone da Tecnologia ReactJs",
+    image: react,
+  },
+  {
+    name: "Astro.Js",
+    alt: "ícone da Tecnologia Astro.Js",
+    image: astro,
+  },
+  {
+    name: "React.Js",
+    alt: "ícone da Tecnologia ReactJs",
+    image: react,
+  },
+  {
+    name: "SASS",
+    alt: "ícone da Tecnologia SASS",
+    image: sass,
+  },
+  {
+    name: "JavaScript",
+    alt: "ícone da Tecnologia JavaScript",
+    image: javascript,
+  },
+  {
+    name: "GitHub",
+    alt: "ícone do GitHub",
+    image: git,
+  },
+];
+---
+
+<ul class="flex flex-wrap justify-center gap-4">
+  {
+    TECHS.map((tec) => (
+      <li class="flex items-center justify-center gap-2 border border-base200 px-4 py-2 rounded-full bg-base300 hover:bg-base100 hover:border-base300 transition-colors shadow-sm shadow-white/5">
+        <Image width={24} height={20} src={tec.image} alt={tec.alt} />
+        <span class="text-md text-base500 text-base font-serif">
+          {tec.name}
+        </span>
+      </li>
+    ))
+  }
+</ul>
+
+<style></style>

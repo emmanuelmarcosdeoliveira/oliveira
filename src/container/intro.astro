@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import arrow from "../assets/icons/arrow-down.svg";
+import code from "../assets/icons/code.svg";
+import profile from "../assets/images/profile.jpg";
+import Technologies from "../components/Technologies.astro";
+---
+
+<section>
+  <div class="bg-intro bg-no-repeat h-screen w-screen bg-cover">
+    <div class="relative flex items-center justify-center pt-8 sm:pt-32 pb-14">
+      <Image
+        class="rounded-full border-2 border-blueColor p-0.5 hover:border-redColor transition-colors drop-shadow-xl"
+        width={140}
+        height={140}
+        src={profile}
+        alt="Imagem de Perfil desenvolvedor Emmanuel Oliveira"
+      />
+    </div>
+    <div
+      class="absolute left-1/2 sm:top-[241px] top-[140px] flex justify-center"
+    >
+      <Image width={48} height={48} src={code} alt="Codding" />
+    </div>
+    <div class="wrapper">
+      <p class="text-base500 text-xl text-center mb-2 px-4">
+        Hello World! Eu sou <span class="text-blueColor">Emmanuel Oliveira</span
+        >
+        e sou
+      </p>
+      <h1
+        class="text-5xl sm:text-6xl text-center text-base500 font-serif font-bold px-4 py-4 sm:py-4 bg-gradient-to-r from-sky-500 to-violet-600 bg-clip-text text-transparent"
+      >
+        Desenvolvedor <span class="hover:text-blueColor transition-colors"
+          >Front End</span
+        >
+      </h1>
+      <div class="flex justify-center">
+        <p
+          class="px-4 text-base400 font-sans text-base md:w-[1000px] sm:text-xl"
+        >
+          Transformo necessidades em aplicações reais, evolventes e funcionais.
+          Desenvolvo sistemas através da minha paixão pela tecnologia,
+          contribuindo com soluções inovadoras e eficazes para desafios
+          complexos.
+        </p>
+      </div>
+      <div class="mt-20">
+        <Technologies />
+      </div>
+      <div class="flex justify-center mt-20 sm:mt-20">
+        <Image
+          class="animate-bounce"
+          src={arrow}
+          alt="seta indicando que tem mais conteúdo abaixo"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style></style>

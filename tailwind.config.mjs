@@ -21,6 +21,9 @@ export default {
         serif: ["Asap"],
         mono: ["Inconsolata"],
       },
+      screens: {
+        mobile: "380px",
+      },
       backgroundImage: {
         intro: "url('src/assets/images/bg-intro.png')",
         contacts: "url('src/assets/images/bg-contacts.png')",
