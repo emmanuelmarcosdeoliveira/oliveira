@@ -1,0 +1,47 @@
+---
+import web from "../assets/icons/web.svg";
+import Description from "../components/Description.astro";
+import Subtitle from "../components/Subtitle.astro";
+const SERVICES = [
+  {
+    name: "Websites e Aplicativos",
+    description: "Desenvolvimento de interfaces",
+    alt: "Prestação de serviços construção de Web sites",
+    img: web,
+  },
+  {
+    name: "Websites e Aplicativos",
+    description: "Desenvolvimento de interfaces",
+    alt: "Prestação de serviços construção de Web sites",
+    img: web,
+  },
+  {
+    name: "Websites e Aplicativos",
+    description: "Desenvolvimento de interfaces",
+    alt: "Prestação de serviços construção de Web sites",
+    img: web,
+  },
+];
+---
+
+<section id="services" class="bg-base100">
+  <div class="wrapper">
+    <div class="text-center">
+      <Subtitle children="Meus Serviços" />
+      <Description children="Como posso ajudar o seu negócio?" />
+    </div>
+    <ul
+      class="grid lg:grid-cols-3 sm:grid-cols-2 gap-4 justify-items-center pb-32"
+    >
+      {
+        SERVICES.map((service) => (
+          <li class="p-5 border-2 border-base200 rounded-xl w-72">
+            <img src={service.img.src} alt={service.alt} />
+            <h3 class="text-base600 font-bold pt-5">{service.name}</h3>
+            <p class="text-base500">{service.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
