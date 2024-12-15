@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import arrowTop from "../assets/icons/arrow.svg";
+import astroimg from "../assets/icons/astro_dark.svg";
+import image1 from "../assets/images/image-01.png";
+import image2 from "../assets/images/image-02.png";
+import image4 from "../assets/images/image-04.png";
+const PROJECTS = [
+  {
+    img: image1,
+    title: "Travelgran",
+    description:
+      "Rede social onde as pessoas mostram os registros de suas viagens pelo mundo",
+    href: "https://",
+    alt: "projeto Tech News",
+    tec1: astroimg,
+  },
+  {
+    img: image2,
+    title: "Tech News",
+    description: "Homepage de um portal de notícias sobre a área de tecnologia",
+    href: "https://",
+    alt: "projeto Tech News",
+    tec1: astroimg,
+  },
+  {
+    img: image4,
+    title: "Zingen",
+    description:
+      "Landing Page completa e responsiva de um aplicativo de Karaokê",
+    href: "https://",
+    alt: "projeto Tech News",
+    tec1: astroimg,
+  },
+  {
+    img: image1,
+    title: "Tech News",
+    description: "Uma Rede de Noticias",
+    href: "https://",
+    alt: "projeto Tech News",
+    tec1: astroimg,
+  },
+];
+---
+
+<div class="wrapper">
+  <ul
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 py-14"
+  >
+    {
+      PROJECTS.map((proj) => (
+        <li class=" w-80   border-base300/50 border-1 rounded-xl p-3 mt-14   shadow-black shadow-md">
+          <figure class="relative">
+            <Image src={proj.img} alt={proj.alt} />
+            <figcaption class="absolute bottom-1 right-1 border cursor-pointer border-base100 rounded-lg text-base600 bg-base100 border-transparent px-2 py-1 font-mono">
+              <img
+                src={proj.tec1.src}
+                title="Projeto Desenvolvido com AstroJs"
+                alt="ícone do astro"
+              />
+            </figcaption>
+          </figure>
+          <h3 class="text-base600 text-base font-serif font-bold pt-6 text-left">
+            {proj.title}
+          </h3>
+          <p class="text-base500 text-left font-thin font-sans text-sm h-12">
+            {proj.description}
+          </p>
+          <div class="flex items-center justify-center py-2">
+            <div class="h-0.5 w-60 bg-base400/10" />
+          </div>
+          <div>
+            <a class="flex justify-center items-center gap-2" href={proj.href}>
+              <span class="block hover:text-blueColor  font-mono font-semibold text-base600 pt-2">
+                SAIBA MAIS
+              </span>
+              <img
+                class="block pt-2"
+                width="10"
+                height="12"
+                src={arrowTop.src}
+                alt="ícone de seta"
+              />
+            </a>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style></style>

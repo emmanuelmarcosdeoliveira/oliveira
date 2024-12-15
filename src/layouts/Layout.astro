@@ -18,15 +18,17 @@ import "../styles/index.css";
     <title>OFS | Portfolio</title>
   </head>
   <body class="bg-base200">
-    <slot />
+    <div class="overflow-x-hidden">
+      <slot />
+    </div>
   </body>
 </html>
 
 <style>
   html,
   body {
-    margin: 0;
+    /* margin: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; */
   }
 </style>
