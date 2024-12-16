@@ -1,0 +1,74 @@
+---
+import linkedIn from "../assets/icons/Linkedin.svg";
+import arrowBlue from "../assets/icons/arrowBlue.svg";
+import email from "../assets/icons/email.svg";
+import github from "../assets/icons/github.svg";
+import insta from "../assets/icons/insta.svg";
+import whats from "../assets/icons/whatsapp.svg";
+const SOCIAL = [
+  {
+    img: whats,
+    name: "WhatsApp",
+    href: "https://www.linkedin.com/in/oliveira-emmanuel/",
+    alt1: "acesso a linkedIn de Emmanuel Marcos de Oliveira",
+    alt2: "ícone de seta de acesso a rede social LinkedIn",
+    link: arrowBlue,
+  },
+  {
+    img: linkedIn,
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/oliveira-emmanuel/",
+    alt1: "acesso a linkedIn de Emmanuel Marcos de Oliveira",
+    alt2: "ícone de seta de acesso a rede social LinkedIn",
+    link: arrowBlue,
+  },
+  {
+    img: github,
+    name: "GitHub",
+    href: "https://www.linkedin.com/in/oliveira-emmanuel/",
+    alt1: "acesso a linkedIn de Emmanuel Marcos de Oliveira",
+    alt2: "ícone de seta de acesso a rede social LinkedIn",
+    link: arrowBlue,
+  },
+  {
+    img: insta,
+    name: "Instagran",
+    href: "https://www.linkedin.com/in/oliveira-emmanuel/",
+    alt1: "acesso a linkedIn de Emmanuel Marcos de Oliveira",
+    alt2: "ícone de seta de acesso a rede social LinkedIn",
+    link: arrowBlue,
+  },
+  {
+    img: email,
+    name: "E-mail",
+    href: "https://www.linkedin.com/in/oliveira-emmanuel/",
+    alt1: "acesso a linkedIn de Emmanuel Marcos de Oliveira",
+    alt2: "ícone de seta de acesso a rede social LinkedIn",
+    link: arrowBlue,
+  },
+];
+---
+
+<ul class="flex flex-col items-center mt-12 gap-4">
+  {
+    SOCIAL.map((network) => (
+      <li class="w-72 md:w-96 h-20 bg-base300 border border-transparent rounded-lg flex items-center p-5">
+        <a href={network.href} target="_blank">
+          <div class="flex items-center gap-2">
+            <div>
+              <img src={network.img.src} alt="" />
+            </div>
+            <div class="w-60 md:w-80">
+              <p class="text-base500 font-medium hover:text-blueColor transition-colors">
+                {network.name}
+              </p>
+            </div>
+            <div>
+              <img src={network.link.src} alt="" />
+            </div>
+          </div>
+        </a>
+      </li>
+    ))
+  }
+</ul>
