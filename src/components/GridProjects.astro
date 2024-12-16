@@ -1,7 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import arrowTop from "../assets/icons/arrow.svg";
+import arrowTop from "../assets/icons/arrowBlue.svg";
 import astroimg from "../assets/icons/astro_dark.svg";
+import reactimg from "../assets/icons/react.svg";
 import image1 from "../assets/images/image-01.png";
 import image2 from "../assets/images/image-02.png";
 import image4 from "../assets/images/image-04.png";
@@ -21,7 +22,7 @@ const PROJECTS = [
     description: "Homepage de um portal de notícias sobre a área de tecnologia",
     href: "https://",
     alt: "projeto Tech News",
-    tec1: astroimg,
+    tec1: reactimg,
   },
   {
     img: image4,
@@ -45,11 +46,11 @@ const PROJECTS = [
 
 <div class="wrapper">
   <ul
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 py-14"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 pb-14"
   >
     {
       PROJECTS.map((proj) => (
-        <li class=" w-80   border-base300/50 border-1 rounded-xl p-3 mt-14   shadow-black shadow-md">
+        <li class=" w-80 border-base300/50 border-1 rounded-xl p-3 mt-14   shadow-black shadow-md">
           <figure class="relative">
             <Image src={proj.img} alt={proj.alt} />
             <figcaption class="absolute bottom-1 right-1 border cursor-pointer border-base100 rounded-lg text-base600 bg-base100 border-transparent px-2 py-1 font-mono">
@@ -71,7 +72,7 @@ const PROJECTS = [
           </div>
           <div>
             <a class="flex justify-center items-center gap-2" href={proj.href}>
-              <span class="block hover:text-blueColor  font-mono font-semibold text-base600 pt-2">
+              <span class="block hover:text-blueColor transition-colors  font-mono font-semibold text-base600 pt-2">
                 SAIBA MAIS
               </span>
               <img

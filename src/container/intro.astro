@@ -7,8 +7,8 @@ import Technologies from "../components/Technologies.astro";
 ---
 
 <section>
-  <div class="bg-intro bg-no-repeat w-screen bg-cover">
-    <div class="relative flex items-center justify-center pt-8 sm:pt-32 pb-14">
+  <div class="bg-intro bg-no-repeat w-screen h-screen bg-cover">
+    <div class="relative flex items-center justify-center pt-24 sm:pt-32 pb-14">
       <Image
         class="rounded-full border-2 border-blueColor p-0.5 hover:border-redColor transition-colors drop-shadow-xl"
         width={140}
@@ -18,7 +18,7 @@ import Technologies from "../components/Technologies.astro";
       />
     </div>
     <div
-      class="absolute left-1/2 sm:top-[241px] top-[140px] flex justify-center"
+      class="absolute left-1/2 sm:top-[241px] top-[208px] flex justify-center"
     >
       <Image width={48} height={48} src={code} alt="Codding" />
     </div>
@@ -29,11 +29,9 @@ import Technologies from "../components/Technologies.astro";
         e sou
       </p>
       <h1
-        class="text-5xl sm:text-6xl text-center text-base500 font-serif font-bold px-4 py-4 sm:py-4 bg-gradient-to-r from-sky-500 to-violet-600 bg-clip-text text-transparent"
+        class="text-5xl sm:text-6xl text-center text-base500 font-serif font-bold px-4 py-4 sm:py-4 bg-gradient-to-r from-sky-500 to-violet-700 bg-clip-text text-transparent hover:text-blueColor transition-colors"
       >
-        Desenvolvedor <span class="hover:text-blueColor transition-colors"
-          >Front End</span
-        >
+        Desenvolvedor <span> Front End</span>
       </h1>
       <div class="flex justify-center">
         <p
@@ -48,7 +46,7 @@ import Technologies from "../components/Technologies.astro";
       <div class="mt-20">
         <Technologies />
       </div>
-      <div class="flex justify-center mt-20 sm:mt-20">
+      <div class="flex justify-center mt-14 sm:mt-20">
         <Image
           class="animate-bounce"
           src={arrow}

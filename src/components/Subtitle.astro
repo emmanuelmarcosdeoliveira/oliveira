@@ -1,10 +1,13 @@
 ---
 interface Props {
   children: string;
+  color: string;
 }
-const { children } = Astro.props;
+const { children, color } = Astro.props;
 ---
 
-<h2 class="text-xl font-normal font-mono text-redColor">
-  {children}
-</h2>
+<div class="pt-20">
+  <h2 class=`text-xl font-normal font-mono pb-2 ${color}`>
+    {children}
+  </h2>
+</div>
