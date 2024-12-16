@@ -1,25 +1,27 @@
 ---
+import api from "../assets/icons/api.svg";
+import ux from "../assets/icons/compass.svg";
 import web from "../assets/icons/web.svg";
 import Description from "../components/Description.astro";
 import Subtitle from "../components/Subtitle.astro";
 const SERVICES = [
   {
     name: "Websites e Aplicativos",
-    description: "Desenvolvimento de interfaces",
+    description: "Desenvolvimento de sites e aplicações Web",
     alt: "Prestação de serviços construção de Web sites",
     img: web,
   },
   {
-    name: "Websites e Aplicativos",
-    description: "Desenvolvimento de interfaces",
+    name: "API e banco de dados",
+    description: "Criação de serviços do sistema ",
     alt: "Prestação de serviços construção de Web sites",
-    img: web,
+    img: api,
   },
   {
-    name: "Websites e Aplicativos",
-    description: "Desenvolvimento de interfaces",
+    name: "Design de Interfaces",
+    description: "Desenvolvimento de interfaces no Figma",
     alt: "Prestação de serviços construção de Web sites",
-    img: web,
+    img: ux,
   },
 ];
 ---
@@ -27,7 +29,7 @@ const SERVICES = [
 <section id="services" class="bg-base100">
   <div class="wrapper">
     <div class="text-center">
-      <Subtitle children="Meus Serviços" />
+      <Subtitle color="text-redColor" children="Meus Serviços" />
       <Description children="Como posso ajudar o seu negócio?" />
     </div>
     <ul
@@ -35,7 +37,7 @@ const SERVICES = [
     >
       {
         SERVICES.map((service) => (
-          <li class="p-5 border-2 border-base200 rounded-xl w-72">
+          <li class="p-5 border-2 border-base200 rounded-xl w-[350px]">
             <img src={service.img.src} alt={service.alt} />
             <h3 class="text-base600 font-bold pt-5">{service.name}</h3>
             <p class="text-base500">{service.description}</p>
