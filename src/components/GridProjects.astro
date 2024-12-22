@@ -10,21 +10,31 @@ interface Props {
 
 <div class="wrapper">
   <ul
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 pb-14"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-2 pb-14"
   >
     {
       PROJECTS.map((proj) => (
-        <li class=" w-80 border-base300/50 border-1 rounded-xl p-3 mt-14   shadow-black shadow-md">
+        <li class=" w-80 border-base300/50 border-1 rounded-xl p-3    shadow-black shadow-md">
           <figure class="relative">
-            <Image class="rounded-md" src={proj.img} alt={proj.alt} />
+            <Image
+              class="rounded-md object-cover w-80 h-52"
+              src={proj.img}
+              alt={proj.alt}
+            />
             <figcaption class="absolute bottom-1 right-1 border cursor-pointer border-base100 rounded-lg text-base600 bg-base100 border-transparent px-2 py-1 font-mono">
-              <Image src={proj.tec1} alt={proj.alt} />
+              <Image
+                class="object-cover"
+                src={proj.tec1}
+                alt={proj.alt}
+                height={21}
+                width={16}
+              />
             </figcaption>
           </figure>
-          <h3 class="text-base600 text-base font-serif font-bold pt-6 text-left">
+          <h3 class="text-base600 text-base font-serif font-bold pt-3 text-left">
             {proj.title}
           </h3>
-          <p class="text-base500 text-left font-thin font-sans text-sm h-12">
+          <p class="text-base500 text-left font-thin font-sans text-sm h-10 truncate">
             {proj.description}
           </p>
           <div class="flex items-center justify-center py-2">

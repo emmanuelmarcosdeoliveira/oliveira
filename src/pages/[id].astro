@@ -3,8 +3,13 @@ import { Image } from "astro:assets";
 import { ClientRouter, fade } from "astro:transitions";
 import github from "../assets/icons/github.svg";
 import globe from "../assets/icons/globe.svg";
+import animais from "../assets/images/animais.png";
 import bikcraft from "../assets/images/bikcraft.png";
-import travelgran from "../assets/images/image-01.png";
+import disney from "../assets/images/disney.png";
+import dogs from "../assets/images/Dogs.png";
+import eplay from "../assets/images/eplay.png";
+import wildeBeast from "../assets/images/mok1.png";
+import zingen from "../assets/images/zingen.png";
 import Layout from "../layouts/Layout.astro";
 
 const { id } = Astro.params;
@@ -32,15 +37,86 @@ export function getStaticPaths() {
       },
     },
     {
-      params: { id: "techNews" },
+      params: { id: "dogs" },
       props: {
-        name: "Travelgran",
-        desc: "Rede social onde as pessoas mostram os registros de suas viagens pelo mundo",
-        repos: "",
-        deploy: "",
-        image: travelgran,
+        name: "Dogs",
+        desc: "Dogs é uma rede social para cachorros, gosta de cachorros acesse o site crie uma conta e poste a foto do seu cachorro",
+        repos: "https://github.com/emmanuelmarcosdeoliveira/dogs-ofs",
+        deploy: "https://ofs-dogs.vercel.app/",
+        image: dogs,
         imageAlt: "Imagem projeto Travelgran",
-        tec: ["JavaScript", "CSS", "HTML"],
+        tec: ["React", "JavaScript", "CSS Modules", "react-router"],
+      },
+    },
+    {
+      params: { id: "eplay" },
+      props: {
+        name: "Eplay",
+        desc: "Eplay é a melhor plataforma de games da atualidade, nela você consegue ver fotos e videos dos seus Games favoritos antes de inserir no carrinho de compras, venha conferir os nossos games ",
+        repos: "https://github.com/emmanuelmarcosdeoliveira/eplay-ofs",
+        deploy: "https://eplay-drab.vercel.app/",
+        image: eplay,
+        imageAlt: "Imagem projeto Travelgran",
+        tec: [
+          "React",
+          "TypeScript ",
+          "styled-comnponents",
+          "react-router",
+          "redux",
+          "redux@toolkit",
+        ],
+      },
+    },
+    {
+      params: { id: "zingen" },
+      props: {
+        name: "Zingen",
+        desc: "Se gosta de musica, venha conferir o app com as músicas mais tocadas da atualidade, escolha um plano, e se divirta com suas músicas favoritas",
+        repos: "https://github.com/emmanuelmarcosdeoliveira/zingen",
+        deploy: "https://zingen-nine.vercel.app/",
+        image: zingen,
+        imageAlt: "Imagem projeto Zingen Desenvolvido por Emmanuel Oliveira ",
+        tec: ["AstroJs", "SASS", "HTML", "CSS"],
+      },
+    },
+    {
+      params: { id: "wildbeast" },
+      props: {
+        name: "WildBeast",
+        desc: "Gosta de animais selvagens, então venha conhecer essa landin-page WildBeast aqui você vai conhecer características dos lobos selvagens",
+        repos: "https://github.com/emmanuelmarcosdeoliveira/zingen",
+        deploy: "https://zingen-nine.vercel.app/",
+        image: wildeBeast,
+        imageAlt:
+          "Imagem projeto WideBeast Desenvolvido por Emmanuel Oliveira ",
+        tec: ["HTML", "CSS"],
+      },
+    },
+    {
+      params: { id: "disneyplus" },
+      props: {
+        name: "Clone do Disney Plus",
+        desc: "Gosta de streaming venha conhecer o meu clone da plataforma Disney +",
+        repos: "https://github.com/emmanuelmarcosdeoliveira/disney-plus-ofs",
+        deploy: "https://disney-plus-clone-dev-oliveira.vercel.app/",
+        image: disney,
+        imageAlt: "Imagem projeto Disney+ Desenvolvido por Emmanuel Oliveira ",
+        tec: ["HTML", "JavaScript", "SASS"],
+      },
+    },
+    {
+      params: { id: "animaisfantasticos" },
+      props: {
+        name: "Animais Fantásticos",
+        desc: "Venha conhecer curiosidades dos animais mais fantásticos do Planeta",
+        repos:
+          "https://github.com/emmanuelmarcosdeoliveira/animais-fantasticos",
+        deploy:
+          "https://emmanuelmarcosdeoliveira.github.io/animais-fantasticos/",
+        image: animais,
+        imageAlt:
+          "Imagem projeto Animais Fantásticos Desenvolvido por Emmanuel Oliveira ",
+        tec: ["HTML", "JavaScript", "CSS", "WebPack"],
       },
     },
   ];
@@ -77,13 +153,13 @@ export function getStaticPaths() {
               />
             </div>
 
-            <div transition:animate="slide">
+            <div transition:animate="slide flex flex-1">
               <h1 class="text-white text-5xl mb-8 sm:mt-8">{name}</h1>
-              <p class="mb-6 text-lg">{desc}</p>
+              <p class="mb-6 text-lg max-w-[45rem]">{desc}</p>
               <h3 class="text-xl text-base400/90">
                 Tecnologias utilizadas nesse Projeto
               </h3>
-              <ul class="flex gap-2 py-4">
+              <ul class="flex max-w-[30rem] flex-wrap gap-2 py-4">
                 {
                   tec.map((tecs) => (
                     <li class="px-2 py-0.5 text-sm font-medium bg-base500 text-base100 rounded-lg hover:opacity-50 transition-colors cursor-pointer">
