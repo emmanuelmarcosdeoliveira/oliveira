@@ -3,3 +3,7 @@
   width: 100%;
   margin-inline: auto;
 }
+
+.bck {
+  background: url("../assets/images/bikcraft.png");
+}

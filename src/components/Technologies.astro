@@ -48,13 +48,23 @@ const TECHS = [
     alt: "ícone do GitHub",
     image: git,
   },
+  {
+    name: "GitHub",
+    alt: "ícone do GitHub",
+    image: git,
+  },
+  {
+    name: "GitHub",
+    alt: "ícone do GitHub",
+    image: git,
+  },
 ];
 ---
 
-<ul class="flex flex-wrap justify-center gap-4">
+<ul class="flex flex-wrap justify-center gap-4 max-w-4xl m-auto">
   {
     TECHS.map((tec) => (
-      <li class="flex items-center justify-center gap-2 border border-base200 px-4 py-2 rounded-full bg-base300 hover:bg-base100 hover:border-base300 transition-colors shadow-sm shadow-white/5">
+      <li class="flex items-center justify-center gap-2 border border-base200 px-4 py-2 rounded-full bg-base300 hover:bg-base100 hover:border-base300 transition-colors shadow-sm shadow-base100">
         <Image width={24} height={20} src={tec.image} alt={tec.alt} />
         <span class="text-md text-base500 text-base font-serif">
           {tec.name}

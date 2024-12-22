@@ -27,6 +27,7 @@ export default {
       backgroundImage: {
         intro: "url('src/assets/images/bg-intro.png')",
         contacts: "url('src/assets/images/bg-contacts.png')",
+        bkc: "url('src/assets/images/bikcraft.png')",
       },
     },
   },
