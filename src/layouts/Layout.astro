@@ -1,32 +1,40 @@
+---
+import { ClientRouter } from "astro:transitions";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header";
+import "../styles/index.css";
+---
+
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
   <head>
+    <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Desenvolvimento de Site e aplicações WEB | Emmanuel Oliveira"
-    />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Maven+Pro:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>OFS |Developer</title>
+    <ClientRouter />
+    <title>OFS | Portfolio</title>
   </head>
-  <body>
-    <slot />
+  <body class="bg-base200">
+    <div class="overflow-x-hidden">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
 
 <style>
   html,
   body {
-    margin: 0;
+    /* margin: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; */
   }
 </style>

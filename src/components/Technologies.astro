@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import { TECHS } from "../utils/data";
+---
+
+<div class="p-2">
+  <ul class="flex flex-wrap justify-center gap-4 h-auto max-w-5xl m-auto">
+    {
+      TECHS.map((tec) => (
+        <li class="flex items-center min-w-fit justify-center gap-2 border border-base200  px-4 py-2 rounded-full bg-base300 hover:bg-base100 hover:border-base300 transition-colors shadow-sm shadow-base100">
+          <Image
+            width={24}
+            height={24}
+            class=" max-w-full object-cover"
+            src={tec.image}
+            alt={tec.alt}
+          />
+          <span class=" text-md text-base500 text-base font-serif">
+            {tec.name}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style></style>
