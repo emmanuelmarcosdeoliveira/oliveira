@@ -3,11 +3,11 @@ import { Image } from "astro:assets";
 import arrow from "../assets/icons/arrow-down.svg";
 import code from "../assets/icons/code.svg";
 import profile from "../assets/images/profile.jpg";
-import Technologies from "../components/Technologies.astro";
+import { TECHS } from "../utils/data";
 ---
 
-<section>
-  <div class="bg-intro bg-no-repeat w-screen h-screen bg-cover">
+<section id="intro">
+  <div class="bg-intro bg-no-repeat w-screen bg-cover">
     <div class="relative flex items-center justify-center pt-24 sm:pt-32 pb-14">
       <Image
         class="rounded-full ring-2 ring-blueColor p-0.5 hover:ring-redColor transition-colors drop-shadow-xl"
@@ -29,26 +29,39 @@ import Technologies from "../components/Technologies.astro";
         e sou
       </p>
       <h1
-        class="text-5xl sm:text-6xl text-center text-base500 font-serif font-bold px-4 py-4 sm:py-4 bg-gradient-to-r from-sky-500 to-violet-700 bg-clip-text text-transparent hover:text-blueColor transition-colors"
+        class="text-5xl sm:text-6xl text-center text-base500 font-serif font-bold px-4 py-4 sm:py-4 bg-gradient-to-r from-sky-500 via-sky-700 to-pink-500 bg-clip-text text-transparent hover:bg-gradient-to-r hover:from-sky-900 10% hover:via-sky-500 10% hover:to-pink-500 80% transition-colors"
       >
         Desenvolvedor <span> Front End</span>
       </h1>
       <div class="flex justify-center">
-        <p
-          class="px-4 text-base400 font-sans text-base md:w-[1000px] sm:text-xl"
-        >
+        <p class="px-4 text-base400 font-sans text-lg md:w-[1000px] sm:text-xl">
           Transformo necessidades em aplicações reais, evolventes e funcionais.
           Desenvolvo sistemas através da minha paixão pela tecnologia,
           contribuindo com soluções inovadoras e eficazes para desafios
           complexos.
         </p>
       </div>
-      <div class="mt-20">
-        <Technologies />
+      <div class="sm:pt-20 pt-5 sm:pb-20 pb-5">
+        <div class="p-2">
+          <ul
+            class="flex flex-wrap justify-center gap-4 h-auto max-w-5xl m-auto"
+          >
+            {
+              TECHS.map((tec) => (
+                <li class="flex items-center min-w-fit justify-center gap-2 border border-base200  px-4 py-2 rounded-full bg-base300 hover:bg-base100 hover:border-base300 transition-colors shadow-sm shadow-base100">
+                  <Image width={24} height={20} src={tec.image} alt={tec.alt} />
+                  <span class=" text-md text-base500 text-base font-serif">
+                    {tec.name}
+                  </span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
-      <div class="flex justify-center mt-14 sm:mt-20">
+      <div>
         <Image
-          class="animate-bounce"
+          class="animate-bounce m-auto mt-6"
           src={arrow}
           alt="seta indicando que tem mais conteúdo abaixo"
         />

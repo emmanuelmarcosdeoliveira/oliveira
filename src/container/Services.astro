@@ -26,22 +26,24 @@ const SERVICES = [
 ];
 ---
 
-<section id="services" class="bg-base100">
+<section id="services" class="bg-base100 pt-20">
   <div class="wrapper">
-    <div class="text-center">
+    <div class="text-center px-2">
       <Subtitle color="text-redColor" children="Meus Serviços" />
       <Description children="Como posso ajudar o seu negócio?" />
     </div>
     <ul
-      class="grid lg:grid-cols-3 sm:grid-cols-2 gap-4 justify-items-center pb-32"
+      class="grid lg:grid-cols-3 sm:grid-cols-2 gap-4 justify-items-center sm:pb-32 pb-16"
     >
       {
         SERVICES.map((service) => (
-          <li class="p-5 border-2 border-base200 rounded-xl w-[350px]">
-            <img src={service.img.src} alt={service.alt} />
-            <h3 class="text-base600 font-bold pt-5">{service.name}</h3>
-            <p class="text-base500">{service.description}</p>
-          </li>
+          <ul class="p-2">
+            <li class="p-5 border-2 border-base200 rounded-xl w-[350px]">
+              <img src={service.img.src} alt={service.alt} />
+              <h3 class="text-base600 font-bold pt-5">{service.name}</h3>
+              <p class="text-base500">{service.description}</p>
+            </li>
+          </ul>
         ))
       }
     </ul>

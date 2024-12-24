@@ -2,10 +2,6 @@
 import { Image } from "astro:assets";
 import arrowTop from "../assets/icons/arrowBlue.svg";
 import { PROJECTS } from "../utils/data";
-
-interface Props {
-  img: ImageMetadata;
-}
 ---
 
 <div class="wrapper">
@@ -21,7 +17,7 @@ interface Props {
               src={proj.img}
               alt={proj.alt}
             />
-            <figcaption class="absolute bottom-1 right-1 border cursor-pointer border-base100 rounded-lg text-base600 bg-base100 border-transparent px-2 py-1 font-mono">
+            <figcaption class="absolute bottom-1 right-1 border cursor-pointer border-base100 rounded-lg  bg-base100 border-transparent px-2 py-1 font-mono">
               <Image
                 class="object-cover"
                 src={proj.tec1}

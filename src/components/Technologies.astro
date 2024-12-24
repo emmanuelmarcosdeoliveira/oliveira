@@ -1,93 +1,27 @@
 ---
 import { Image } from "astro:assets";
-import astro from "../assets/icons/astro_dark.svg";
-import css from "../assets/icons/css_old.svg";
-import git from "../assets/icons/git.svg";
-import html from "../assets/icons/html5.svg";
-import javascript from "../assets/icons/javascript_1.svg";
-import next from "../assets/icons/next.svg";
-import react from "../assets/icons/react.svg";
-import redux from "../assets/icons/redux.svg";
-import sass from "../assets/icons/sass.svg";
-import styledcomponents from "../assets/icons/styledcomponents.svg";
-import tailwindCSS from "../assets/icons/tailwindcss.svg";
-import typeS from "../assets/icons/typescript.svg";
-const TECHS = [
-  {
-    name: "Next.JS",
-    alt: "ícone da Tecnologia NextJS",
-    image: next,
-  },
-  {
-    name: "TailwindCSS",
-    alt: "ícone da Tecnologia TailwindCSS",
-    image: tailwindCSS,
-  },
-  {
-    name: "React.Js",
-    alt: "ícone da Tecnologia ReactJs",
-    image: react,
-  },
-  {
-    name: "TypeScript",
-    alt: "ícone da Tecnologia TypeScript",
-    image: typeS,
-  },
-  {
-    name: "Astro.Js",
-    alt: "ícone da Tecnologia Astro.Js",
-    image: astro,
-  },
-  {
-    name: "SASS",
-    alt: "ícone da Tecnologia SASS",
-    image: sass,
-  },
-  {
-    name: "JavaScript",
-    alt: "ícone da Tecnologia JavaScript",
-    image: javascript,
-  },
-
-  {
-    name: "Styled components",
-    alt: "ícone do GitHub",
-    image: styledcomponents,
-  },
-  {
-    name: "GitHub",
-    alt: "ícone do GitHub",
-    image: git,
-  },
-  {
-    name: "CSS3",
-    alt: "ícone da  tecnologia CSS3",
-    image: css,
-  },
-  {
-    name: "HTML5",
-    alt: "ícone da  tecnologia HTML5",
-    image: html,
-  },
-  {
-    name: "Redux@toolkit",
-    alt: "ícone da  tecnologia Redux",
-    image: redux,
-  },
-];
+import { TECHS } from "../utils/data";
 ---
 
-<ul class="flex flex-wrap justify-center gap-4 max-w-4xl m-auto">
-  {
-    TECHS.map((tec) => (
-      <li class="flex items-center justify-center gap-2 border border-base200 px-4 py-2 rounded-full bg-base300 hover:bg-base100 hover:border-base300 transition-colors shadow-sm shadow-base100">
-        <Image width={24} height={20} src={tec.image} alt={tec.alt} />
-        <span class="text-md text-base500 text-base font-serif">
-          {tec.name}
-        </span>
-      </li>
-    ))
-  }
-</ul>
+<div class="p-2">
+  <ul class="flex flex-wrap justify-center gap-4 h-auto max-w-5xl m-auto">
+    {
+      TECHS.map((tec) => (
+        <li class="flex items-center min-w-fit justify-center gap-2 border border-base200  px-4 py-2 rounded-full bg-base300 hover:bg-base100 hover:border-base300 transition-colors shadow-sm shadow-base100">
+          <Image
+            width={24}
+            height={24}
+            class=" max-w-full object-cover"
+            src={tec.image}
+            alt={tec.alt}
+          />
+          <span class=" text-md text-base500 text-base font-serif">
+            {tec.name}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
 
 <style></style>

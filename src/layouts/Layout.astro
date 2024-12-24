@@ -1,13 +1,13 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header";
 import "../styles/index.css";
 ---
 
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
   <head>
-    <ClientRouter />
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +18,12 @@ import "../styles/index.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <ClientRouter />
     <title>OFS | Portfolio</title>
   </head>
   <body class="bg-base200">
     <div class="overflow-x-hidden">
+      <Header />
       <slot />
       <Footer />
     </div>
