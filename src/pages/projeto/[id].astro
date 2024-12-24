@@ -127,7 +127,7 @@ export function getStaticPaths() {
   <body>
     <Layout>
       <section
-        class="text-base500 bg-contacts px-6 h-screen w-screen bg-cover bg-no-repeat"
+        class="text-base500 bg-contacts px-6 w-screen bg-cover bg-no-repeat mt-32 sm:mt-16"
       >
         <div class="wrapper">
           <div
@@ -147,7 +147,7 @@ export function getStaticPaths() {
             </div>
 
             <div transition:animate="slide">
-              <h1 class="text-white text-5xl mb-8 sm:mt-8">{name}</h1>
+              <h1 class="text-white text-5xl mb-8 mt-8 md:mt-4">{name}</h1>
               <p class="mb-6 text-lg max-w-[45rem]">{desc}</p>
               <h3 class="text-xl text-base400/90">
                 Tecnologias utilizadas nesse Projeto
@@ -166,7 +166,7 @@ export function getStaticPaths() {
                   ))
                 }
               </ul>
-              <div class="flex gap-2">
+              <div class="flex gap-2 mt-5">
                 <div>
                   <a
                     class="flex items-center justify-center gap-2 rounded-lg px-2 py-2 max-w-32 border border-base400/50 hover:bg-base100 hover:text-base600"
