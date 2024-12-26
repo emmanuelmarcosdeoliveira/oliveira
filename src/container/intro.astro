@@ -10,7 +10,7 @@ import { TECHS } from "../utils/data";
   <div class="bg-intro bg-no-repeat w-screen bg-cover">
     <div class="relative flex items-center justify-center pt-24 sm:pt-32 pb-14">
       <Image
-        class="rounded-full ring-2 ring-blueColor p-0.5 hover:ring-redColor transition-colors drop-shadow-xl"
+        class="rounded-full ring-2 ring-blueColor p-0.5 hover:ring-redColor transition-colors drop-shadow-xl motion-preset-expand motion-duration-1000"
         width={180}
         height={180}
         src={profile}
@@ -23,17 +23,19 @@ import { TECHS } from "../utils/data";
       <Image width={48} height={48} src={code} alt="Codding" />
     </div>
     <div class="wrapper">
-      <p class="text-base500 text-xl text-center mb-2 px-4">
+      <p
+        class="text-base500 text-xl text-center mb-2 px-4 motion-preset-slide-right-md"
+      >
         Hello World! Eu sou <span class="text-blueColor">Emmanuel Oliveira</span
         >
         e sou
       </p>
       <h1
-        class="text-5xl sm:text-6xl text-center text-base500 font-serif font-bold px-4 py-4 sm:py-4 bg-gradient-to-r from-sky-500 via-sky-700 to-pink-500 bg-clip-text text-transparent hover:bg-gradient-to-r hover:from-sky-900 10% hover:via-sky-500 10% hover:to-pink-500 80% transition-colors"
+        class="motion-preset-blur-left-lg text-5xl sm:text-6xl text-center text-base500 font-serif font-bold px-4 py-4 sm:py-4 bg-gradient-to-r from-sky-500 via-sky-700 to-pink-500 bg-clip-text text-transparent hover:bg-gradient-to-r hover:from-sky-900 10% hover:via-sky-500 10% hover:to-pink-500 80% transition-colors"
       >
-        Desenvolvedor <span> Front End</span>
+        Desenvolvedor Front End
       </h1>
-      <div class="flex justify-center">
+      <div class="flex justify-center -motion-translate-x-in-25">
         <p class="px-4 text-base400 font-sans text-lg md:w-[1000px] sm:text-xl">
           Transformo necessidades em aplicações reais, evolventes e funcionais.
           Desenvolvo sistemas através da minha paixão pela tecnologia,
@@ -48,7 +50,7 @@ import { TECHS } from "../utils/data";
           >
             {
               TECHS.map((tec) => (
-                <li class="flex items-center min-w-fit justify-center gap-2 border border-base200  px-4 py-2 rounded-full bg-base300 hover:bg-base100 hover:border-base300 transition-colors shadow-sm shadow-base100">
+                <li class="flex items-center min-w-fit justify-center gap-2 border border-base200  px-4 py-2 rounded-full bg-base300 hover:bg-base100 hover:border-base300 transition-colors shadow-sm shadow-base100 motion-preset-expand motion-duration-2000 ">
                   <Image width={24} height={20} src={tec.image} alt={tec.alt} />
                   <span class=" text-md text-base500 text-base font-serif">
                     {tec.name}
