@@ -189,7 +189,7 @@ export const SOCIAL = [
   {
     img: email,
     name: "E-mail",
-    href: "https://malito:ofs.dev.br@gmail.com",
+    href: "mailto:ofs.dev.br@gmail.com",
     alt1: "acesso a email de Emmanuel Oliveira",
     alt2: "ícone de seta de acesso a email",
     link: arrowBlue,
