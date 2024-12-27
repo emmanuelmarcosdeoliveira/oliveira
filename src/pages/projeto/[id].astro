@@ -27,7 +27,7 @@ export function getStaticPaths() {
         deploy: "https://bikcraft-woad.vercel.app/",
         image: bikcraft,
         imageAlt: "Imagem projeto Travelgran",
-        tec: ["JavaScript", "CSS", "HTML"],
+        tec: ["JavaScript", "CSS", "HTML"
         content: "Projeto Bikcraft desenvolvido por OFS | Emmanuel OLiveira",
         title: "OFS | Bikctaft",
       },
@@ -42,7 +42,7 @@ export function getStaticPaths() {
         image: dogs,
         imageAlt: "Imagem projeto Travelgran",
         tec: ["React", "JavaScript", "CSS Modules", "react-router"],
-        content: "Projeto Dogs desenvolvido por OFS | Emmanuel OLiveira  ",
+        content: "Projeto Dogs desenvolvido por OFS | Emmanuel OLiveira" 
         title: "OFS | Dogs",
       },
     },
@@ -65,6 +65,7 @@ export function getStaticPaths() {
         ],
         content: "Projeto Eplay desenvolvido por OFS | Emmanuel OLiveira  ",
         title: "OFS | Eplay",
+
       },
     },
     {
@@ -134,78 +135,78 @@ export function getStaticPaths() {
         <div class="wrapper">
           <div
             class="h-screen md:flex flex-row justify-center gap-8 items-center"
-          >
-            <div
-              transition:animate={fade({
-                duration: "0.6s",
-              })}
-            >
-              <Image
-                class="shadow-2xl shadow-base100 rounded-lg"
-                width={880}
-                src={image}
-                alt={imageAlt}
-              />
-            </div>
+      },
+    },
+  ];
+}
+---
 
-            <div transition:animate="slide">
-              <h1 class="text-white text-5xl mb-8 mt-8 md:mt-4">{name}</h1>
-              <p class="mb-6 text-lg max-w-[45rem]">{desc}</p>
-              <h3 class="text-xl text-base400/90">
-                Tecnologias utilizadas nesse Projeto
-              </h3>
-              <ul
-                transition:animate={fade({
-                  duration: "1s",
-                })}
-                class="flex max-w-[30rem] flex-wrap gap-2 py-4"
+<Layout content={content}>
+  <section
+    class="text-base500 bg-contacts px-6 w-screen bg-cover bg-no-repeat mt-32 sm:mt-16"
+  >
+    <meta name="description" content={content} />
+    <div class="wrapper">
+      <div class="h-screen md:flex flex-row justify-center gap-8 items-center">
+        <div
+          transition:animate={fade({
+            duration: "0.6s",
+          })}
+        >
+          <Image
+            class="shadow-2xl shadow-base100 rounded-lg"
+            width={880}
+            src={image}
+            alt={imageAlt}
+          />
+        </div>
+
+        <div transition:animate="slide">
+          <h1 class="text-white text-5xl mb-8 mt-8 md:mt-4">{name}</h1>
+          <p class="mb-6 text-lg max-w-[45rem]">{desc}</p>
+          <h3 class="text-xl text-base400/90">
+            Tecnologias utilizadas nesse Projeto
+          </h3>
+          <ul
+            transition:animate={fade({
+              duration: "1s",
+            })}
+            class="flex max-w-[30rem] flex-wrap gap-2 py-4"
+          >
+            {
+              tec.map((tecs) => (
+                <li class="px-2 py-0.5 text-sm font-medium bg-base500 text-base100 rounded-lg hover:opacity-50 transition-colors cursor-pointer">
+                  {tecs}
+                </li>
+              ))
+            }
+          </ul>
+          <div class="flex gap-2 mt-5">
+            <div>
+              <a
+                class="flex items-center justify-center gap-2 rounded-lg px-2 py-2 max-w-32 border border-base400/50 hover:bg-base100 hover:text-base600"
+                href={repo}
               >
-                {
-                  tec.map((tecs) => (
-                    <li class="px-2 py-0.5 text-sm font-medium bg-base500 text-base100 rounded-lg hover:opacity-50 transition-colors cursor-pointer">
-                      {tecs}
-                    </li>
-                  ))
-                }
-              </ul>
-              <div class="flex gap-2 mt-5">
-                <div>
-                  <a
-                    class="flex items-center justify-center gap-2 rounded-lg px-2 py-2 max-w-32 border border-base400/50 hover:bg-base100 hover:text-base600"
-                    href={repo}
-                  >
-                    <span
-                      ><img
-                        width="20"
-                        height="20"
-                        src={github.src}
-                        alt=""
-                      /></span
-                    >
-                    GitHub
-                  </a>
-                </div>
-                <div>
-                  <a
-                    class="flex items-center justify-center gap-2 rounded-lg px-2 py-2 max-w-44 border border-base400/50 hover:bg-base100 hover:text-base600"
-                    href={deploy}
-                  >
-                    <span
-                      ><img
-                        width="20"
-                        height="20"
-                        src={globe.src}
-                        alt=""
-                      /></span
-                    >
-                    versão On-line
-                  </a>
-                </div>
-              </div>
+                <span
+                  ><img width="20" height="20" src={github.src} alt="" /></span
+                >
+                GitHub
+              </a>
+            </div>
+            <div>
+              <a
+                class="flex items-center justify-center gap-2 rounded-lg px-2 py-2 max-w-44 border border-base400/50 hover:bg-base100 hover:text-base600"
+                href={deploy}
+              >
+                <span
+                  ><img width="20" height="20" src={globe.src} alt="" /></span
+                >
+                versão On-line
+              </a>
             </div>
           </div>
         </div>
-      </section>
-    </Layout>
-  </body>
-</html>
+      </div>
+    </div>
+  </section>
+</Layout>
