@@ -13,7 +13,8 @@ import Layout from "../../layouts/Layout.astro";
 
 const { id } = Astro.params;
 
-const { name, desc, tec, image, imageAlt, repo, deploy, content } = Astro.props;
+const { name, desc, tec, image, imageAlt, repo, deploy, content, title } =
+  Astro.props;
 
 export function getStaticPaths() {
   return [
@@ -26,8 +27,9 @@ export function getStaticPaths() {
         deploy: "https://bikcraft-woad.vercel.app/",
         image: bikcraft,
         imageAlt: "Imagem projeto Travelgran",
-        tec: ["JavaScript", "CSS", "HTML"],
-        content: "Projeto Bikcraft desenvolvido por OFS | Emmanuel OLiveira  ",
+        tec: ["JavaScript", "CSS", "HTML"
+        content: "Projeto Bikcraft desenvolvido por OFS | Emmanuel OLiveira",
+        title: "OFS | Bikctaft",
       },
     },
     {
@@ -40,7 +42,8 @@ export function getStaticPaths() {
         image: dogs,
         imageAlt: "Imagem projeto Travelgran",
         tec: ["React", "JavaScript", "CSS Modules", "react-router"],
-        content: "Projeto Dogs desenvolvido por OFS | Emmanuel OLiveira  ",
+        content: "Projeto Dogs desenvolvido por OFS | Emmanuel OLiveira" 
+        title: "OFS | Dogs",
       },
     },
     {
@@ -61,6 +64,8 @@ export function getStaticPaths() {
           "redux@toolkit",
         ],
         content: "Projeto Eplay desenvolvido por OFS | Emmanuel OLiveira  ",
+        title: "OFS | Eplay",
+
       },
     },
     {
@@ -74,6 +79,7 @@ export function getStaticPaths() {
         imageAlt: "Imagem projeto Zingen Desenvolvido por Emmanuel Oliveira ",
         tec: ["AstroJs", "SASS", "HTML", "CSS"],
         content: "Projeto Zingen desenvolvido por OFS | Emmanuel OLiveira  ",
+        title: "OFS | Zingen",
       },
     },
     {
@@ -88,6 +94,7 @@ export function getStaticPaths() {
         tec: ["HTML", "JavaScript", "SASS"],
         content:
           "Projeto Disney Plus desenvolvido por OFS | Emmanuel OLiveira  ",
+        title: "OFS | Disney+",
       },
     },
     {
@@ -104,6 +111,30 @@ export function getStaticPaths() {
         tec: ["HTML", "JavaScript", "CSS", "WebPack"],
         content:
           "Projeto Animais Fantásticos desenvolvido por OFS | Emmanuel OLiveira  ",
+        title: "OFS | Animais Fantásticos",
+      },
+    },
+  ];
+}
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={content} />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Layout>
+      <section
+        class="text-base500 bg-contacts px-6 w-screen bg-cover bg-no-repeat mt-32 sm:mt-16"
+      >
+        <meta name="description" content={content} />
+        <div class="wrapper">
+          <div
+            class="h-screen md:flex flex-row justify-center gap-8 items-center"
       },
     },
   ];
