@@ -13,7 +13,8 @@ import Layout from "../../layouts/Layout.astro";
 
 const { id } = Astro.params;
 
-const { name, desc, tec, image, imageAlt, repo, deploy, content } = Astro.props;
+const { name, desc, tec, image, imageAlt, repo, deploy, content, title } =
+  Astro.props;
 
 export function getStaticPaths() {
   return [
@@ -27,7 +28,8 @@ export function getStaticPaths() {
         image: bikcraft,
         imageAlt: "Imagem projeto Travelgran",
         tec: ["JavaScript", "CSS", "HTML"],
-        content: "Projeto Bikcraft desenvolvido por OFS | Emmanuel OLiveira  ",
+        content: "Projeto Bikcraft desenvolvido por OFS | Emmanuel OLiveira",
+        title: "OFS | Bikctaft",
       },
     },
     {
@@ -41,6 +43,7 @@ export function getStaticPaths() {
         imageAlt: "Imagem projeto Travelgran",
         tec: ["React", "JavaScript", "CSS Modules", "react-router"],
         content: "Projeto Dogs desenvolvido por OFS | Emmanuel OLiveira  ",
+        title: "OFS | Dogs",
       },
     },
     {
@@ -61,6 +64,7 @@ export function getStaticPaths() {
           "redux@toolkit",
         ],
         content: "Projeto Eplay desenvolvido por OFS | Emmanuel OLiveira  ",
+        title: "OFS | Eplay",
       },
     },
     {
@@ -74,6 +78,7 @@ export function getStaticPaths() {
         imageAlt: "Imagem projeto Zingen Desenvolvido por Emmanuel Oliveira ",
         tec: ["AstroJs", "SASS", "HTML", "CSS"],
         content: "Projeto Zingen desenvolvido por OFS | Emmanuel OLiveira  ",
+        title: "OFS | Zingen",
       },
     },
     {
@@ -88,6 +93,7 @@ export function getStaticPaths() {
         tec: ["HTML", "JavaScript", "SASS"],
         content:
           "Projeto Disney Plus desenvolvido por OFS | Emmanuel OLiveira  ",
+        title: "OFS | Disney+",
       },
     },
     {
@@ -104,78 +110,102 @@ export function getStaticPaths() {
         tec: ["HTML", "JavaScript", "CSS", "WebPack"],
         content:
           "Projeto Animais Fantásticos desenvolvido por OFS | Emmanuel OLiveira  ",
+        title: "OFS | Animais Fantásticos",
       },
     },
   ];
 }
 ---
 
-<Layout content={content}>
-  <section
-    class="text-base500 bg-contacts px-6 w-screen bg-cover bg-no-repeat mt-32 sm:mt-16"
-  >
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <meta name="description" content={content} />
-    <div class="wrapper">
-      <div class="h-screen md:flex flex-row justify-center gap-8 items-center">
-        <div
-          transition:animate={fade({
-            duration: "0.6s",
-          })}
-        >
-          <Image
-            class="shadow-2xl shadow-base100 rounded-lg"
-            width={880}
-            src={image}
-            alt={imageAlt}
-          />
-        </div>
-
-        <div transition:animate="slide">
-          <h1 class="text-white text-5xl mb-8 mt-8 md:mt-4">{name}</h1>
-          <p class="mb-6 text-lg max-w-[45rem]">{desc}</p>
-          <h3 class="text-xl text-base400/90">
-            Tecnologias utilizadas nesse Projeto
-          </h3>
-          <ul
-            transition:animate={fade({
-              duration: "1s",
-            })}
-            class="flex max-w-[30rem] flex-wrap gap-2 py-4"
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Layout>
+      <section
+        class="text-base500 bg-contacts px-6 w-screen bg-cover bg-no-repeat mt-32 sm:mt-16"
+      >
+        <meta name="description" content={content} />
+        <div class="wrapper">
+          <div
+            class="h-screen md:flex flex-row justify-center gap-8 items-center"
           >
-            {
-              tec.map((tecs) => (
-                <li class="px-2 py-0.5 text-sm font-medium bg-base500 text-base100 rounded-lg hover:opacity-50 transition-colors cursor-pointer">
-                  {tecs}
-                </li>
-              ))
-            }
-          </ul>
-          <div class="flex gap-2 mt-5">
-            <div>
-              <a
-                class="flex items-center justify-center gap-2 rounded-lg px-2 py-2 max-w-32 border border-base400/50 hover:bg-base100 hover:text-base600"
-                href={repo}
-              >
-                <span
-                  ><img width="20" height="20" src={github.src} alt="" /></span
-                >
-                GitHub
-              </a>
+            <div
+              transition:animate={fade({
+                duration: "0.6s",
+              })}
+            >
+              <Image
+                class="shadow-2xl shadow-base100 rounded-lg"
+                width={880}
+                src={image}
+                alt={imageAlt}
+              />
             </div>
-            <div>
-              <a
-                class="flex items-center justify-center gap-2 rounded-lg px-2 py-2 max-w-44 border border-base400/50 hover:bg-base100 hover:text-base600"
-                href={deploy}
+
+            <div transition:animate="slide">
+              <h1 class="text-white text-5xl mb-8 mt-8 md:mt-4">{name}</h1>
+              <p class="mb-6 text-lg max-w-[45rem]">{desc}</p>
+              <h3 class="text-xl text-base400/90">
+                Tecnologias utilizadas nesse Projeto
+              </h3>
+              <ul
+                transition:animate={fade({
+                  duration: "1s",
+                })}
+                class="flex max-w-[30rem] flex-wrap gap-2 py-4"
               >
-                <span
-                  ><img width="20" height="20" src={globe.src} alt="" /></span
-                >
-                versão On-line
-              </a>
+                {
+                  tec.map((tecs) => (
+                    <li class="px-2 py-0.5 text-sm font-medium bg-base500 text-base100 rounded-lg hover:opacity-50 transition-colors cursor-pointer">
+                      {tecs}
+                    </li>
+                  ))
+                }
+              </ul>
+              <div class="flex gap-2 mt-5">
+                <div>
+                  <a
+                    class="flex items-center justify-center gap-2 rounded-lg px-2 py-2 max-w-32 border border-base400/50 hover:bg-base100 hover:text-base600"
+                    href={repo}
+                  >
+                    <span
+                      ><img
+                        width="20"
+                        height="20"
+                        src={github.src}
+                        alt=""
+                      /></span
+                    >
+                    GitHub
+                  </a>
+                </div>
+                <div>
+                  <a
+                    class="flex items-center justify-center gap-2 rounded-lg px-2 py-2 max-w-44 border border-base400/50 hover:bg-base100 hover:text-base600"
+                    href={deploy}
+                  >
+                    <span
+                      ><img
+                        width="20"
+                        height="20"
+                        src={globe.src}
+                        alt=""
+                      /></span
+                    >
+                    versão On-line
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-</Layout>
+      </section>
+    </Layout>
+  </body>
+</html>
