@@ -25,9 +25,9 @@ export default {
         mobile: "380px",
       },
       backgroundImage: {
-        intro: "url('../src/assets/images/bgIntro.png')",
-        contacts: "url('../src/assets/images/bgContacts.png')",
-        bkc: "url('../src/assets/images/bikcraft.png')",
+        intro: "url('/src/assets/images/bgIntro.png')",
+        contacts: "url('/src/assets/images/bgContacts.png')",
+        bkc: "url('/src/assets/images/bikcraft.png')",
       },
     },
   },
